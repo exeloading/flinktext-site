@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Help · Flinktext</title>
+<meta name="description" content="Flinktext guide: abbreviations, quick search, placeholders, forms, moving in from other programs, backups and answers to common questions.">
+<link rel="icon" href="../favicon.png">
+<link rel="alternate" hreflang="de" href="../hilfe.html">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="wrap top">
+ <a class="brand" href="./"><img src="../img/icon-64.png" alt="">FLINKTEXT</a>
+ <nav><a href="help.html" aria-current="page">Help</a><a href="privacy.html">Privacy</a><a href="../hilfe.html" hreflang="de" lang="de">Deutsch</a></nav>
+</header>
+
+<main class="wrap doc">
+<h1>Help</h1>
+<p class="lead">Everything you need for Flinktext, step by step. Your question is not here? Write to <a href="#support">support</a>.</p>
+
+<h2 id="start">Getting started</h2>
+<ol>
+ <li>Start Flinktext. The first time, a short introduction shows you everything in three steps. That is also where you switch on abbreviations and starting with Windows.</li>
+ <li>Click <strong>+</strong> on the left, enter a name and your text, plus an abbreviation like <code>/br</code>. Flinktext saves by itself.</li>
+ <li>Type <code>/br</code> in any program. The text appears.</li>
+</ol>
+<p>Flinktext then keeps running in the background (icon at the bottom right of the taskbar), so you can simply close the window.</p>
+
+<h2 id="abbreviations">Abbreviations</h2>
+<p>An abbreviation is a short sequence you type instead of the whole text. The safest ones start with a character that normal words do not contain, for example <code>/br</code>, <code>;adr</code> or <code>#tel</code>. That way no word is ever replaced by accident.</p>
+<ul>
+ <li><strong>At once or with Tab:</strong> under "Expand abbreviations" in the settings you choose whether the text appears at once or only when you press Tab after the abbreviation.</li>
+ <li><strong>Undo:</strong> right after inserting, Backspace takes the insertion back and your abbreviation is there again.</li>
+ <li><strong>Abbreviations made of letters</strong> like <code>br</code> only work at the start of a word, so "library" stays intact.</li>
+ <li><strong>Pause:</strong> click "Pause" at the top right when Flinktext should insert nothing for a while.</li>
+</ul>
+
+<h2 id="quick-search">Quick search and hotkeys</h2>
+<p><code>Ctrl</code> + <code>Shift</code> + <code>Space</code> opens the quick search over any program. Type a few letters, choose with the arrow keys, Enter inserts, Esc closes. You can change the key combination in the settings.</p>
+<p>Important texts can get a combination of their own under "Hotkey": F1 to F11 alone, or two modifier keys plus a letter or digit, for example <code>Ctrl</code> + <code>Alt</code> + <code>T</code>. If another program already uses a combination, Flinktext tells you.</p>
+
+<h2 id="placeholders">Placeholders</h2>
+<p>Placeholders sit in curly braces and are replaced when the text is inserted. The buttons above the text field add them for you. Every placeholder has an English and a German name, both work.</p>
+<div class="table-scroll"><table>
+ <tr><th>Placeholder</th><th>Becomes</th></tr>
+ <tr><td><code>{date}</code></td><td>today's date, as set in Windows</td></tr>
+ <tr><td><code>{date+14}</code> <code>{date-1}</code></td><td>the date in 14 days, yesterday. Weeks, months and years too: <code>{date+2w}</code> <code>{date+1m}</code> <code>{date+1y}</code></td></tr>
+ <tr><td><code>{date:dddd, MMMM d, yyyy}</code></td><td>your own format, here "Thursday, November 12, 2026"</td></tr>
+ <tr><td><code>{weekday}</code> <code>{month}</code> <code>{year}</code></td><td>today's weekday, month, year</td></tr>
+ <tr><td><code>{time}</code> <code>{timestamp}</code></td><td>the current time, date with time</td></tr>
+ <tr><td><code>{date_iso}</code></td><td>the date as 2026-11-12</td></tr>
+ <tr><td><code>{clipboard}</code></td><td>whatever is in the clipboard right now</td></tr>
+ <tr><td><code>{cursor}</code></td><td>the cursor ends up here after inserting</td></tr>
+ <tr><td><code>{tab}</code> <code>{enter}</code></td><td>presses Tab or Enter, for example to jump to the next field of a web form</td></tr>
+ <tr><td><code>{snippet:/br}</code></td><td>inserts another snippet here (name or abbreviation)</td></tr>
+</table></div>
+<p><strong>Bold, italic and lists:</strong> <code>**bold**</code>, <code>*italic*</code> and lines starting with <code>- </code> are inserted formatted when "Insert formatted" is chosen under "Insert mode". This works in programs that accept formatted text, such as Word and Outlook.</p>
+
+<h2 id="forms">Forms</h2>
+<p>With these placeholders Flinktext asks while inserting and fills in your answers:</p>
+<div class="table-scroll"><table>
+ <tr><th>Placeholder</th><th>Asks for</th></tr>
+ <tr><td><code>{input:Name}</code></td><td>a text. With a default: <code>{input:Time|2:00 pm}</code></td></tr>
+ <tr><td><code>{choice:Greeting|Hi|Hello}</code></td><td>one of several fixed options</td></tr>
+ <tr><td><code>{checkbox:Newsletter|Yes|No}</code></td><td>yes or no, with the text for both cases</td></tr>
+ <tr><td><code>{datefield:Date|today+7}</code></td><td>a date, with a calendar and a default</td></tr>
+</table></div>
+<p>If the same name appears several times, Flinktext asks only once and fills in the answer everywhere.</p>
+
+<h2 id="programs">Only in certain programs</h2>
+<p>Under "Only in this program", enter the name of the program file, for example <code>outlook.exe</code>. Separate several with commas. Empty means everywhere. That way the same abbreviation can insert something different in Outlook than in the browser.</p>
+
+<h2 id="move-in">Moving in from other programs</h2>
+<p>In the settings under "Move in", click "Take over from another app" and choose the file. Several files at once work too. Your existing snippets stay, the new ones are added. Abbreviations come along, hotkeys do not.</p>
+<div class="table-scroll"><table>
+ <tr><th>Program</th><th>File</th></tr>
+ <tr><td>Beeftext</td><td><code>combos.json</code> (usually in <code>%AppData%\beeftext</code>) or a file exported from Beeftext</td></tr>
+ <tr><td>Espanso</td><td>the <code>.yml</code> files from the <code>match</code> folder (usually <code>%AppData%\espanso\match</code>)</td></tr>
+ <tr><td>AutoHotkey</td><td>your script (<code>.ahk</code>); its hotstrings are taken over</td></tr>
+ <tr><td>TextExpander, aText</td><td>export as CSV</td></tr>
+ <tr><td>Excel, LibreOffice</td><td>save the sheet as CSV: columns abbreviation, text, name</td></tr>
+</table></div>
+<p>Placeholders such as date or clipboard are converted to Flinktext's own. Whatever cannot be translated safely is listed in the report under "Please check".</p>
+
+<h2 id="backups">Backups and your data</h2>
+<ul>
+ <li>Flinktext creates backups automatically. "View backups" brings back an earlier state; the current one is backed up first.</li>
+ <li>"Save to file" writes all snippets to a file, "Load from file" brings them back. That is also how you move to a new PC.</li>
+ <li><strong>Important:</strong> when you uninstall Flinktext, Windows also deletes the stored snippets. Save them first with "Save to file".</li>
+</ul>
+
+<h2 id="problems">When something does not work</h2>
+<details><summary>Nothing is inserted in one program</summary><p>Does that program run as administrator? Then Windows keeps other programs out of it, and Flinktext shows a message about it. Fix: start the program normally. Also check whether Flinktext is paused, or whether the snippet is limited to another program under "Only in this program".</p></details>
+<details><summary>The old clipboard content gets inserted</summary><p>Some slow programs read the clipboard late. In the settings under "Advanced", raise the wait before restoring, for example to 800. Or choose the insert mode "Type character by character" for that snippet.</p></details>
+<details><summary>An abbreviation replaces something it should not</summary><p>Use an abbreviation that starts with a special character such as <code>/</code> or <code>;</code>, or set "Expand abbreviations" to "Only after the Tab key". Right after a wrong replacement, Backspace helps.</p></details>
+<details><summary>Flinktext does not start with Windows</summary><p>Switch on "Start with Windows" in the settings. If it says "Switched off in Windows", startup was turned off in the Windows settings under Apps, Startup. The button next to it opens exactly that page.</p></details>
+<details><summary>My hotkey does nothing</summary><p>Another program already uses it. Flinktext shows this next to the hotkey. Choose a different one, for example with <code>Ctrl</code> + <code>Alt</code>.</p></details>
+
+<h2 id="support">Support</h2>
+<p>Write to <span class="todo">[FILL IN: support email]</span>. It helps to include your Windows version, the Flinktext version (shown in the settings) and what exactly happens. Please do not send confidential texts.</p>
+</main>
+
+<footer><div class="wrap">
+ <span>© 2026 Flinktext</span><span class="grow"></span>
+ <a href="./">Home</a><a href="privacy.html">Privacy</a><a href="../impressum.html">Legal notice</a><a href="../hilfe.html" hreflang="de" lang="de">Deutsch</a>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hilfe · Flinktext</title>
+<meta name="description" content="Anleitung für Flinktext: Kürzel, Schnellsuche, Platzhalter, Formulare, Umzug von anderen Programmen, Sicherungen und Lösungen für häufige Fragen.">
+<link rel="icon" href="favicon.png">
+<link rel="alternate" hreflang="en" href="en/help.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="wrap top">
+ <a class="brand" href="./"><img src="img/icon-64.png" alt="">FLINKTEXT</a>
+ <nav><a href="hilfe.html" aria-current="page">Hilfe</a><a href="datenschutz.html">Datenschutz</a><a href="en/help.html" hreflang="en" lang="en">English</a></nav>
+</header>
+
+<main class="wrap doc">
+<h1>Hilfe</h1>
+<p class="lead">Alles, was du für Flinktext brauchst, Schritt für Schritt. Deine Frage ist nicht dabei? Schreib an den <a href="#support">Support</a>.</p>
+
+<h2 id="start">Erste Schritte</h2>
+<ol>
+ <li>Flinktext starten. Beim ersten Mal zeigt dir eine kurze Einführung alles in drei Schritten. Dort schaltest du auch die Kürzel und den Start mit Windows ein.</li>
+ <li>Links auf <strong>+</strong> klicken, einen Namen und deinen Text eintragen, dazu ein Kürzel wie <code>/mfg</code>. Flinktext speichert von selbst.</li>
+ <li>In irgendeinem Programm <code>/mfg</code> tippen. Der Text erscheint.</li>
+</ol>
+<p>Flinktext läuft danach im Hintergrund weiter (Symbol unten rechts in der Taskleiste). Du kannst das Fenster also einfach schließen.</p>
+
+<h2 id="kuerzel">Kürzel</h2>
+<p>Ein Kürzel ist eine kurze Zeichenfolge, die du statt des ganzen Textes tippst. Am sichersten sind Kürzel mit einem Zeichen davor, das in normalen Wörtern nicht vorkommt, zum Beispiel <code>/mfg</code>, <code>;adr</code> oder <code>#tel</code>. So wird nie aus Versehen ein Wort ersetzt.</p>
+<ul>
+ <li><strong>Sofort oder mit Tab:</strong> In den Einstellungen wählst du bei „Kürzel auslösen“, ob der Text sofort erscheint oder erst, wenn du nach dem Kürzel die Tab-Taste drückst.</li>
+ <li><strong>Rückgängig:</strong> Direkt nach dem Einfügen macht die Rücktaste das Einfügen rückgängig, und dein Kürzel steht wieder da.</li>
+ <li><strong>Kürzel aus Buchstaben</strong> wie <code>mfg</code> funktionieren nur am Anfang eines Wortes, damit „Kampfgeist“ nicht zerstört wird.</li>
+ <li><strong>Pausieren:</strong> Oben rechts auf „Pausieren“ klicken, wenn Flinktext eine Weile gar nichts einfügen soll.</li>
+</ul>
+
+<h2 id="schnellsuche">Schnellsuche und Tastenkombinationen</h2>
+<p><code>Strg</code> + <code>Umschalt</code> + <code>Leertaste</code> öffnet die Schnellsuche über jedem Programm. Ein paar Buchstaben tippen, mit den Pfeiltasten wählen, Enter fügt ein, Esc schließt. Die Tastenkombination kannst du in den Einstellungen ändern.</p>
+<p>Wichtige Texte bekommen bei „Tastenkombination“ eine eigene Kombination: F1 bis F11 allein oder zwei Zusatztasten plus Buchstabe oder Zahl, zum Beispiel <code>Strg</code> + <code>Alt</code> + <code>T</code>. Ist eine Kombination schon von einem anderen Programm belegt, sagt dir Flinktext das.</p>
+
+<h2 id="platzhalter">Platzhalter</h2>
+<p>Platzhalter stehen in geschweiften Klammern und werden beim Einfügen ersetzt. Die Knöpfe über dem Textfeld fügen sie für dich ein. Jeder Platzhalter hat einen deutschen und einen englischen Namen, beide funktionieren.</p>
+<div class="table-scroll"><table>
+ <tr><th>Platzhalter</th><th>Wird zu</th></tr>
+ <tr><td><code>{datum}</code></td><td>heutiges Datum, so wie in Windows eingestellt</td></tr>
+ <tr><td><code>{datum+14}</code> <code>{datum-1}</code></td><td>Datum in 14 Tagen, gestern. Auch Wochen, Monate, Jahre: <code>{datum+2w}</code> <code>{datum+1m}</code> <code>{datum+1j}</code></td></tr>
+ <tr><td><code>{datum:dddd, d. MMMM yyyy}</code></td><td>eigenes Format, hier „Donnerstag, 12. November 2026“. <code>TT.MM.JJJJ</code> geht auch</td></tr>
+ <tr><td><code>{wochentag}</code> <code>{monat}</code> <code>{jahr}</code></td><td>heutiger Wochentag, Monat, Jahr</td></tr>
+ <tr><td><code>{uhrzeit}</code> <code>{zeitstempel}</code></td><td>aktuelle Uhrzeit, Datum mit Uhrzeit</td></tr>
+ <tr><td><code>{datum_iso}</code></td><td>Datum als 2026-11-12</td></tr>
+ <tr><td><code>{clipboard}</code></td><td>was gerade in der Zwischenablage steht</td></tr>
+ <tr><td><code>{cursor}</code></td><td>hier steht der Cursor nach dem Einfügen</td></tr>
+ <tr><td><code>{tab}</code> <code>{enter}</code></td><td>drückt Tab oder Enter, zum Beispiel um in Webformularen ins nächste Feld zu springen</td></tr>
+ <tr><td><code>{vorlage:/mfg}</code></td><td>fügt hier einen anderen Textbaustein ein (Name oder Kürzel)</td></tr>
+</table></div>
+<p><strong>Fett, kursiv und Listen:</strong> <code>**fett**</code>, <code>*kursiv*</code> und Zeilen mit <code>- </code> am Anfang werden formatiert eingefügt, wenn bei „Einfüge-Art“ die Option „Formatiert einfügen“ gewählt ist. Das klappt in Programmen, die formatierten Text annehmen, etwa Word und Outlook.</p>
+
+<h2 id="formulare">Formulare</h2>
+<p>Mit diesen Platzhaltern fragt Flinktext beim Einfügen nach und setzt deine Antworten ein:</p>
+<div class="table-scroll"><table>
+ <tr><th>Platzhalter</th><th>Fragt nach</th></tr>
+ <tr><td><code>{eingabe:Name}</code></td><td>einem Text. Mit Vorgabe: <code>{eingabe:Uhrzeit|14:00}</code></td></tr>
+ <tr><td><code>{auswahl:Anrede|Hallo|Guten Tag}</code></td><td>einer Auswahl aus festen Möglichkeiten</td></tr>
+ <tr><td><code>{checkbox:Newsletter|Ja|Nein}</code></td><td>Ja oder Nein, mit dem Text für beide Fälle</td></tr>
+ <tr><td><code>{datumsfeld:Termin|heute+7}</code></td><td>einem Datum, mit Kalender und Vorgabe</td></tr>
+</table></div>
+<p>Kommt derselbe Name mehrmals vor, fragt Flinktext nur einmal und setzt die Antwort überall ein.</p>
+
+<h2 id="programme">Nur in bestimmten Programmen</h2>
+<p>Bei „Nur in diesem Programm“ trägst du den Namen der Programmdatei ein, zum Beispiel <code>outlook.exe</code>. Mehrere trennst du mit Komma. Leer heißt: überall. So kann dasselbe Kürzel in Outlook etwas anderes einfügen als im Browser.</p>
+
+<h2 id="umzug">Umzug von anderen Programmen</h2>
+<p>In den Einstellungen unter „Umziehen“ auf „Aus anderem Programm übernehmen“ klicken und die Datei wählen. Mehrere Dateien auf einmal gehen auch. Deine vorhandenen Textbausteine bleiben, die neuen kommen dazu. Kürzel werden übernommen, Tastenkombinationen nicht.</p>
+<div class="table-scroll"><table>
+ <tr><th>Programm</th><th>Datei</th></tr>
+ <tr><td>Beeftext</td><td><code>combos.json</code> (liegt meist unter <code>%AppData%\beeftext</code>) oder eine mit Beeftext exportierte Datei</td></tr>
+ <tr><td>Espanso</td><td>die <code>.yml</code>-Dateien aus dem Ordner <code>match</code> (meist <code>%AppData%\espanso\match</code>)</td></tr>
+ <tr><td>AutoHotkey</td><td>dein Skript (<code>.ahk</code>), übernommen werden die Hotstrings</td></tr>
+ <tr><td>TextExpander, aText</td><td>Export als CSV</td></tr>
+ <tr><td>Excel, LibreOffice</td><td>Tabelle als CSV speichern: Spalten Kürzel, Text, Name</td></tr>
+</table></div>
+<p>Platzhalter wie Datum oder Zwischenablage rechnet Flinktext in seine eigenen um. Was es nicht sicher übersetzen kann, nennt der Bericht danach unter „Bitte prüfen“.</p>
+
+<h2 id="sicherung">Sicherungen und deine Daten</h2>
+<ul>
+ <li>Flinktext legt automatisch Sicherungen an. Unter „Sicherungen ansehen“ holst du einen früheren Stand zurück; der jetzige wird vorher selbst gesichert.</li>
+ <li>„In Datei sichern“ speichert alle Textbausteine in eine Datei, „Aus Datei laden“ holt sie zurück. So ziehst du auch auf einen neuen PC um.</li>
+ <li><strong>Wichtig:</strong> Beim Deinstallieren löscht Windows auch die gespeicherten Textbausteine. Sichere sie vorher mit „In Datei sichern“.</li>
+</ul>
+
+<h2 id="probleme">Wenn etwas nicht klappt</h2>
+<details><summary>In einem Programm wird nichts eingefügt</summary><p>Läuft das Programm mit Administratorrechten? Dann lässt Windows andere Programme dort nicht hinein. Flinktext zeigt dafür eine Meldung. Abhilfe: das Programm normal starten. Prüfe auch, ob Flinktext pausiert ist oder der Textbaustein bei „Nur in diesem Programm“ auf ein anderes Programm beschränkt ist.</p></details>
+<details><summary>Es wird der alte Inhalt der Zwischenablage eingefügt</summary><p>Manche langsamen Programme lesen die Zwischenablage spät. Unter Einstellungen, „Erweitert“, die Wartezeit vor dem Wiederherstellen erhöhen, etwa auf 800. Oder bei diesem Textbaustein die Einfüge-Art „Zeichen für Zeichen tippen“ wählen.</p></details>
+<details><summary>Das Kürzel ersetzt etwas, das es nicht soll</summary><p>Nimm ein Kürzel mit Sonderzeichen davor, etwa <code>/</code> oder <code>;</code>, oder stell bei „Kürzel auslösen“ auf „Erst nach der Tab-Taste“. Direkt nach einem falschen Ersetzen hilft die Rücktaste.</p></details>
+<details><summary>Flinktext startet nicht mit Windows</summary><p>Den Schalter „Mit Windows starten“ in den Einstellungen einschalten. Steht dort „In Windows ausgeschaltet“, wurde der Autostart in den Windows-Einstellungen unter Apps, Autostart abgeschaltet. Der Knopf daneben öffnet genau diese Seite.</p></details>
+<details><summary>Meine Tastenkombination tut nichts</summary><p>Ein anderes Programm hat sie schon belegt. Flinktext zeigt das bei der Tastenkombination an. Wähle eine andere, zum Beispiel mit <code>Strg</code> + <code>Alt</code>.</p></details>
+
+<h2 id="support">Support</h2>
+<p>Schreib an <span class="todo">[AUSFÜLLEN: Support-E-Mail]</span>. Hilfreich sind deine Windows-Version, die Flinktext-Version (steht in den Einstellungen) und was genau passiert. Bitte schick keine vertraulichen Texte mit.</p>
+</main>
+
+<footer><div class="wrap">
+ <span>© 2026 Flinktext</span><span class="grow"></span>
+ <a href="./">Startseite</a><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a><a href="en/help.html" hreflang="en" lang="en">English</a>
+</div></footer>
+</body>
+</html>
