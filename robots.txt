@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://exeloading.github.io/flinktext-site/sitemap.xml

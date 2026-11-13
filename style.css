@@ -51,6 +51,9 @@ th,td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px soli
 th{color:var(--soft);font-size:12px;letter-spacing:1px;text-transform:uppercase}
 code{font-family:Consolas,"Cascadia Mono",ui-monospace,monospace;font-size:.92em;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:1px 5px;white-space:nowrap}
 .table-scroll{overflow-x:auto}
+pre{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;overflow-x:auto;font-size:14px;line-height:1.55}
+pre code{background:none;border:0;padding:0;white-space:pre;font-size:inherit}
+.grid.two{grid-template-columns:1fr 1fr;margin:8px 0 6px}
 details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:10px 0}
 summary{cursor:pointer;font-weight:650}
 details p{color:var(--muted);margin:10px 0 0}
@@ -63,7 +66,7 @@ footer .grow{flex:1}
  .pair{grid-template-columns:1fr}
 }
 @media (max-width:560px){
- .steps,.grid{grid-template-columns:1fr}
+ .steps,.grid,.grid.two{grid-template-columns:1fr}
  .top{flex-wrap:wrap}
  .top nav{margin-left:0;width:100%;gap:14px}
  code{white-space:normal}

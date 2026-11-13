@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Textbausteine in Outlook nutzen · Flinktext</title>
+<meta name="description" content="Textbausteine in Outlook per Kürzel einfügen: Anleitung mit Beispiel, Abfragen für Name und Termin, nur in Outlook aktiv (outlook.exe, olk.exe).">
+<link rel="icon" href="favicon.png">
+<link rel="alternate" hreflang="en" href="en/outlook.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="wrap top">
+ <a class="brand" href="./"><img src="img/icon-64.png" alt="">FLINKTEXT</a>
+ <nav><a href="hilfe.html">Hilfe</a><a href="vergleich.html">Vergleich</a><a href="datenschutz.html">Datenschutz</a><a href="en/outlook.html" hreflang="en" lang="en">English</a></nav>
+</header>
+
+<main class="wrap doc">
+<h1>Textbausteine in Outlook</h1>
+<p class="stand">Stand: 13. November 2026.</p>
+<p class="lead">Grußformeln, Antworten auf häufige Fragen, Terminbestätigungen: Mit Flinktext tippst du in Outlook ein Kürzel, und der ganze Text steht da. Dieselben Texte gehen auch im Browser, in Word und im Chat.</p>
+
+<h2 id="eigene">Outlook hat doch eigene Bausteine?</h2>
+<p>Ja. Outlook bringt Schnellbausteine mit, das neue Outlook auch „Meine Vorlagen“. Für ein paar Texte, die du nur in Outlook brauchst, reicht das. Flinktext lohnt sich, wenn du</p>
+<ul>
+ <li>lieber ein Kürzel tippst als dich durch Menüs zu klicken,</li>
+ <li>dieselben Texte auch außerhalb von Outlook brauchst, etwa im Browser oder in Teams,</li>
+ <li>Abfragen beim Einfügen willst, zum Beispiel nach Name und Termin,</li>
+ <li>Datumsangaben wie „in 14 Tagen“ automatisch einsetzen willst.</li>
+</ul>
+
+<h2 id="schritte">In drei Schritten</h2>
+<ol>
+ <li>In Flinktext links auf <strong>+</strong> klicken. Name „Terminbestätigung“, Kürzel <code>/termin</code>, dazu den Text unten.</li>
+ <li>Bei „Einfüge-Art“ „Formatiert einfügen“ wählen, damit Fettes fett ankommt.</li>
+ <li>In Outlook eine neue E-Mail öffnen und <code>/termin</code> tippen. Flinktext fragt nach Anrede, Name, Termin und Uhrzeit und setzt alles ein.</li>
+</ol>
+<pre><code>{auswahl:Anrede|Hallo|Guten Tag} {eingabe:Name},
+
+danke für deine Anfrage. Dein Termin steht:
+**{datumsfeld:Termin|heute+7} um {eingabe:Uhrzeit|14:00} Uhr**
+
+{cursor}
+
+Viele Grüße</code></pre>
+<p>Nach dem Einfügen steht der Cursor an der Stelle von <code>{cursor}</code>, du kannst also gleich weiterschreiben.</p>
+
+<h2 id="ideen">Weitere Ideen für E-Mails</h2>
+<ul>
+ <li><strong>Grußformel</strong> unter jede Mail: <code>/mfg</code>.</li>
+ <li><strong>Nachfassen</strong>: „Ich melde mich bis zum <code>{datum+14}</code> bei dir.“</li>
+ <li><strong>Häufige Fragen</strong> wie Öffnungszeiten, Preise oder Anfahrt, je mit eigenem Kürzel.</li>
+ <li><strong>Rückruf-Notiz</strong> mit <code>{datum}</code>, <code>{uhrzeit}</code> und <code>{eingabe:Anrufer}</code>.</li>
+</ul>
+
+<h2 id="nur-outlook">Nur in Outlook aktiv</h2>
+<p>Soll ein Textbaustein nur in Outlook funktionieren, trägst du bei „Nur in diesem Programm“ den Namen der Programmdatei ein:</p>
+<div class="table-scroll"><table>
+ <tr><th>Outlook</th><th>Eintrag</th></tr>
+ <tr><td>klassisches Outlook</td><td><code>outlook.exe</code></td></tr>
+ <tr><td>neues Outlook</td><td><code>olk.exe</code></td></tr>
+ <tr><td>beide</td><td><code>outlook.exe, olk.exe</code></td></tr>
+ <tr><td>Outlook im Browser</td><td>der Browser, etwa <code>msedge.exe</code> oder <code>chrome.exe</code> (gilt dann im ganzen Browser)</td></tr>
+</table></div>
+
+<h2 id="probleme">Wenn etwas hakt</h2>
+<details><summary>Es kommt der alte Inhalt der Zwischenablage an</summary><p>Unter Einstellungen, „Erweitert“, die Wartezeit vor dem Wiederherstellen erhöhen, etwa auf 800. Mehr dazu in der <a href="hilfe.html#probleme">Hilfe</a>.</p></details>
+<details><summary>Fett und Listen fehlen</summary><p>Beim Textbaustein die Einfüge-Art „Formatiert einfügen“ wählen. Ist die E-Mail auf „Nur-Text“ gestellt, kommt immer reiner Text an.</p></details>
+<details><summary>Das Kürzel wird nicht ersetzt</summary><p>Prüfe, ob Flinktext pausiert ist und ob bei „Nur in diesem Programm“ das richtige Outlook steht (siehe Tabelle oben).</p></details>
+
+<p class="muted">Mehr Programme im Überblick: <a href="vergleich.html">Textbausteine für Windows im Vergleich</a>.</p>
+
+<div class="cta" style="margin-top:30px">
+ <a class="button" href="https://apps.microsoft.com/search?query=Flinktext">Im Microsoft Store holen</a>
+ <a class="button ghost" href="hilfe.html">So funktioniert es</a>
+</div>
+<p class="price">30 Tage kostenlos testen, danach 4,99 € einmalig. Kein Abo.</p>
+
+<p class="muted" style="margin-top:28px">Programmdatei des neuen Outlook: <a href="https://www.msoutlook.info/?p=1432">msoutlook.info</a>, abgerufen am 13. November 2026. Outlook ist eine Marke von Microsoft. Plumlark steht in keiner Verbindung zu Microsoft.</p>
+</main>
+
+<footer><div class="wrap">
+ <span>© 2026 Plumlark</span><span class="grow"></span>
+ <a href="./">Startseite</a><a href="hilfe.html">Hilfe</a><a href="vergleich.html">Vergleich</a><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a><a href="en/outlook.html" hreflang="en" lang="en">English</a>
+</div></footer>
+</body>
+</html>

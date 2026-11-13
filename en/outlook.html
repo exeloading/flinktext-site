@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Text snippets in Outlook · Flinktext</title>
+<meta name="description" content="Insert text snippets in Outlook with an abbreviation: a guide with an example, questions for name and date, and Outlook-only snippets (outlook.exe, olk.exe).">
+<link rel="icon" href="../favicon.png">
+<link rel="alternate" hreflang="de" href="../textbausteine-outlook.html">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="wrap top">
+ <a class="brand" href="./"><img src="../img/icon-64.png" alt="">FLINKTEXT</a>
+ <nav><a href="help.html">Help</a><a href="compare.html">Compare</a><a href="privacy.html">Privacy</a><a href="../textbausteine-outlook.html" hreflang="de" lang="de">Deutsch</a></nav>
+</header>
+
+<main class="wrap doc">
+<h1>Text snippets in Outlook</h1>
+<p class="stand">As of 13 November 2026.</p>
+<p class="lead">Sign-offs, answers to common questions, appointment confirmations: with Flinktext you type an abbreviation in Outlook and the whole text is there. The same snippets work in your browser, in Word and in chat too.</p>
+
+<h2 id="built-in">Doesn't Outlook have its own?</h2>
+<p>It does. Outlook has Quick Parts, and the new Outlook also has "My Templates". For a few texts you only use in Outlook, that is enough. Flinktext is worth it if you</p>
+<ul>
+ <li>would rather type an abbreviation than click through menus,</li>
+ <li>need the same texts outside Outlook too, for example in the browser or in Teams,</li>
+ <li>want questions while inserting, for example for a name and a date,</li>
+ <li>want dates like "in 14 days" filled in automatically.</li>
+</ul>
+
+<h2 id="steps">In three steps</h2>
+<ol>
+ <li>In Flinktext, click <strong>+</strong> on the left. Name "Appointment", abbreviation <code>/appt</code>, and the text below.</li>
+ <li>Under "Insert mode", choose "Insert formatted" so bold text arrives in bold.</li>
+ <li>In Outlook, open a new email and type <code>/appt</code>. Flinktext asks for the greeting, name, date and time and fills everything in.</li>
+</ol>
+<pre><code>{choice:Greeting|Hi|Hello} {input:Name},
+
+thanks for getting in touch. Your appointment is booked:
+**{datefield:Date|today+7} at {input:Time|2 pm}**
+
+{cursor}
+
+Best regards</code></pre>
+<p>After inserting, the cursor sits where <code>{cursor}</code> was, so you can keep typing.</p>
+
+<h2 id="ideas">More ideas for email</h2>
+<ul>
+ <li><strong>Sign-off</strong> under every email: <code>/br</code>.</li>
+ <li><strong>Follow-up</strong>: "I'll get back to you by <code>{date+14}</code>."</li>
+ <li><strong>Common questions</strong> such as opening hours, prices or directions, each with its own abbreviation.</li>
+ <li><strong>Call note</strong> with <code>{date}</code>, <code>{time}</code> and <code>{input:Caller}</code>.</li>
+</ul>
+
+<h2 id="only-outlook">Only active in Outlook</h2>
+<p>To make a snippet work only in Outlook, enter the program file under "Only in this program":</p>
+<div class="table-scroll"><table>
+ <tr><th>Outlook</th><th>Entry</th></tr>
+ <tr><td>classic Outlook</td><td><code>outlook.exe</code></td></tr>
+ <tr><td>new Outlook</td><td><code>olk.exe</code></td></tr>
+ <tr><td>both</td><td><code>outlook.exe, olk.exe</code></td></tr>
+ <tr><td>Outlook in the browser</td><td>the browser, for example <code>msedge.exe</code> or <code>chrome.exe</code> (then it applies in the whole browser)</td></tr>
+</table></div>
+
+<h2 id="problems">If something doesn't work</h2>
+<details><summary>The old clipboard content is pasted</summary><p>Under Settings, "Advanced", raise the wait before restoring, for example to 800. More in the <a href="help.html#problems">Help</a>.</p></details>
+<details><summary>Bold and lists are missing</summary><p>Set the snippet's insert mode to "Insert formatted". If the email is set to plain text, only plain text arrives.</p></details>
+<details><summary>The abbreviation is not replaced</summary><p>Check whether Flinktext is paused and whether "Only in this program" names the right Outlook (see the table above).</p></details>
+
+<p class="muted">More programs at a glance: <a href="compare.html">Text expanders for Windows compared</a>.</p>
+
+<div class="cta" style="margin-top:30px">
+ <a class="button" href="https://apps.microsoft.com/search?query=Flinktext">Get it from the Microsoft Store</a>
+ <a class="button ghost" href="help.html">How it works</a>
+</div>
+<p class="price">Try it free for 30 days, then buy it once. No subscription.</p>
+
+<p class="muted" style="margin-top:28px">Program file of the new Outlook: <a href="https://www.msoutlook.info/?p=1432">msoutlook.info</a>, retrieved on 13 November 2026. Outlook is a trademark of Microsoft. Plumlark is not affiliated with Microsoft.</p>
+</main>
+
+<footer><div class="wrap">
+ <span>© 2026 Plumlark</span><span class="grow"></span>
+ <a href="./">Home</a><a href="help.html">Help</a><a href="compare.html">Compare</a><a href="privacy.html">Privacy</a><a href="../impressum.html">Legal notice</a><a href="../textbausteine-outlook.html" hreflang="de" lang="de">Deutsch</a>
+</div></footer>
+</body>
+</html>
